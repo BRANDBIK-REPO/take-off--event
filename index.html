@@ -82,13 +82,6 @@
             min-width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        .content img.loaded {
-            opacity: 1;
-            transform: translateX(0);
         }
         @media (min-width: 768px) {
             .content {
@@ -132,8 +125,8 @@
     </header>
 
     <div class="content">
-        <img src="./two.jpg" alt="Event Poster 1" onload="imageLoaded(this)" style="margin-right: 18px;">
-        <img src="./one.jpg" alt="Event Poster 2" onload="imageLoaded(this)">
+        <img src="./two.jpg" alt="Event Poster 1" style="margin-right: 18px;">
+        <img src="./one.jpg" alt="Event Poster 2">
     </div>
 
     <a href="https://forms.gle/SJ5gfENdu2BnPTcs7" class="btn">Book Event</a>
@@ -143,11 +136,6 @@
         window.addEventListener("load", function () {
             document.getElementById("loading").style.display = "none";
         });
-
-        // Function to add loaded class to images
-        function imageLoaded(img) {
-            img.classList.add('loaded');
-        }
     </script>
 </body>
 </html>
